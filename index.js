@@ -18,13 +18,18 @@ function showThankYou() {
 
 // End of thank you card
 
-// Looping through a list of Rating Items to add specific CSS
+// Looping through a list of Rating Items to add specific CSS and allow confirmation of rating on Thank you page!
 
 var listItems = document.querySelectorAll(".rate");
 
 for (var i = 0; i < listItems.length; i++) {
+  var ratingConfirmation = document.querySelector(".rating-confirmation");
+
   document.querySelectorAll(".rate")[i].addEventListener("click", function () {
     var currentRateButton = this;
+    console.log(currentRateButton.value);
+
+    ratingConfirmation.innerHTML = `You selected ${currentRateButton.value} out of 5`;
 
     listItems.forEach((listItem) => {
       listItem.classList.remove("active");
@@ -34,3 +39,7 @@ for (var i = 0; i < listItems.length; i++) {
 }
 
 // End of looping through the list
+
+// Identifying and confirming the rating user selected
+
+// End of Identification and Confirmation of rate
