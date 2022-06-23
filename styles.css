@@ -24,6 +24,7 @@ p {
 }
 .rating-card {
   margin: 30% auto;
+  max-width: 450px;
 }
 
 .rating-question,
@@ -54,6 +55,18 @@ li {
   text-align: center;
   width: 1rem;
   height: 1rem;
+  transition: 200ms all ease-in-out;
+  cursor: pointer;
+}
+
+.active {
+  background-color: hsl(217, 12%, 63%);
+  color: hsl(0, 0%, 100%);
+}
+
+li:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
 }
 
 input[type="submit"] {
@@ -69,6 +82,11 @@ input[type="submit"] {
   width: 100%;
 }
 
+#submit:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: blue;
+}
+
 .thank-you-image {
   padding: 15px;
 }
@@ -80,4 +98,10 @@ input[type="submit"] {
   padding: 8px 12px;
   margin: 0 auto;
   border-radius: 50px;
+}
+
+@media (min-width: 1440px) {
+  .rating-card {
+    margin: 10% auto;
+  }
 }
